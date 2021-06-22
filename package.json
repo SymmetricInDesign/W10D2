@@ -1,0 +1,32 @@
+{
+  "name": "Todo",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "redux": "^4.1.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SymmetricInDesign/W10D2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SymmetricInDesign/W10D2/issues"
+  },
+  "homepage": "https://github.com/SymmetricInDesign/W10D2#readme",
+  "description": "Simple crud app to manage a todo list"
+}
