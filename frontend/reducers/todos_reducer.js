@@ -1,22 +1,8 @@
-import {RECEIVE_TODO, RECEIVE_TODOS} from "../actions/todo_actions"
+import {RECEIVE_TODO, RECEIVE_TODOS, REMOVE_TODO} from "../actions/todo_actions"
 // import {RECEIVE_TODOS} from "../actions/todo_actions"
 
-const initialState = {
-    1: {
-      id: 1,
-      title: "wash car",
-      body: "with soap",
-      done: false
-    },
-    2: {
-      id: 2,
-      title: "wash dog",
-      body: "with shampoo",
-      done: true
-    }
-  };
 
-function todosReducer(state=initialState, action){
+function todosReducer(state={}, action){
     Object.freeze(state)
     let newState = Object.assign({}, state);
 
@@ -29,6 +15,9 @@ function todosReducer(state=initialState, action){
             return newState
         case RECEIVE_TODO:
             newState[action.todo.id] = action.todo
+            return newState
+        case REMOVE_TODO:
+            delete newState[action.id]
             return newState
         default:
             return newState
