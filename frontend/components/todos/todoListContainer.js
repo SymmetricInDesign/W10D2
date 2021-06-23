@@ -13,12 +13,16 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         receiveTodo: (todo) => {
+            // debugger
             return dispatch(receiveTodo(todo))
         },
         receiveTodos: (todos) => {
             return dispatch(receiveTodos(todos))
         },
         removeTodo: (id) => {
+            // console.log("removing todo")
+            // debugger
+            // console.log(state)
             return dispatch(removeTodo(id))
         }
     }

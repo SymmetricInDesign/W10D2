@@ -18,6 +18,7 @@ function todosReducer(state={}, action){
             return newState
         case REMOVE_TODO:
             delete newState[action.id]
+            console.log(newState)
             return newState
         default:
             return newState
