@@ -413,8 +413,8 @@ var TodoListItem = /*#__PURE__*/function (_React$Component) {
 
     _classCallCheck(this, TodoListItem);
 
-    _this = _super.call(this, props);
-    _this.todo = _this.props.todo;
+    _this = _super.call(this, props); // this.todo = this.props.todo
+
     _this.handleDeleteClick = _this.handleDeleteClick.bind(_assertThisInitialized(_this));
     _this.handleDoneClick = _this.handleDoneClick.bind(_assertThisInitialized(_this));
     return _this;
@@ -424,7 +424,7 @@ var TodoListItem = /*#__PURE__*/function (_React$Component) {
     key: "handleDeleteClick",
     value: function handleDeleteClick(e) {
       e.preventDefault();
-      this.props.removeTodo(this.todo.id);
+      this.props.removeTodo(this.props.todo.id);
     }
   }, {
     key: "handleDoneClick",
@@ -439,7 +439,7 @@ var TodoListItem = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, this.todo.title, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, this.props.todo.title, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.handleDoneClick
       }, this.props.todo.done ? "Undo" : "Done"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         onClick: this.handleDeleteClick

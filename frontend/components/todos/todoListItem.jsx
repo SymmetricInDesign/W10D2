@@ -11,7 +11,7 @@ class TodoListItem extends React.Component {
 
     constructor(props){
         super(props)
-        this.todo = this.props.todo
+        // this.todo = this.props.todo
 
         this.handleDeleteClick = this.handleDeleteClick.bind(this)
         this.handleDoneClick = this.handleDoneClick.bind(this)
@@ -20,7 +20,7 @@ class TodoListItem extends React.Component {
     handleDeleteClick(e){
         e.preventDefault()
         
-        this.props.removeTodo(this.todo.id)
+        this.props.removeTodo(this.props.todo.id)
     }
 
     handleDoneClick(e){
@@ -32,7 +32,7 @@ class TodoListItem extends React.Component {
 
     render (){
         return (
-            <li>{this.todo.title} 
+            <li>{this.props.todo.title} 
                 <button onClick={this.handleDoneClick}>{this.props.todo.done ? "Undo" : "Done"}</button>
                 <button onClick={this.handleDeleteClick}>delete</button>
             </li>
