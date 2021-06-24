@@ -31,3 +31,11 @@ export const fetchTodos = () => {
         })
     }
 }
+
+export const createTodo = todo => {
+    return dispatch => {
+        return TodoAPIUtil.createTodo(todo).then(result => {
+            dispatch(receiveTodo(result))
+        })
+    }
+}

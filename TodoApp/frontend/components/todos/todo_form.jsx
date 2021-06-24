@@ -28,7 +28,10 @@ class TodoForm extends React.Component{
         e.preventDefault()
         const todo = Object.assign({}, this.state, {id: new Date().getTime(), done: false})
         console.log(this.props)
-        this.props.receiveTodo(todo);
+        // this.props.receiveTodo(todo);
+        this.props.createTodo(todo).then(
+            () => this.setState({title:"", body:""})
+        )
     }
 
     render(){
