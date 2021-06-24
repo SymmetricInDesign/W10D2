@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+verbalize all logic and don't skip any steps. if you get stuck 
+ fill that gap and restart from the beginning. repeat
+ over and over again until you can recite the full cycle
